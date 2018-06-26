@@ -116,6 +116,46 @@
           }
         }
       }
+    },
+    "cockpitNotification": {
+      "root": "projects/cockpit-notification",
+      "sourceRoot": "projects/cockpit-notification/src",
+      "projectType": "library",
+      "prefix": "ccpt",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/cockpit-notification/tsconfig.lib.json",
+            "project": "projects/cockpit-notification/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "project": "projects/cockpit-notification/ng-package.prod.json"
+            }
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/cockpit-notification/src/test.ts",
+            "tsConfig": "projects/cockpit-notification/tsconfig.spec.json",
+            "karmaConfig": "projects/cockpit-notification/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/cockpit-notification/tsconfig.lib.json",
+              "projects/cockpit-notification/tsconfig.spec.json"
+            ],
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
     }
   },
   "defaultProject": "cockpitNotificationsDemo"
