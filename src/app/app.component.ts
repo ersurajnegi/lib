@@ -1,6 +1,5 @@
 import { Component, AfterViewInit } from '@angular/core';
 import { CockpitNotificationService } from 'cockpitNotification';
-import * as SvgPanZoom from 'svg-pan-zoom';
 
 @Component({
   selector: 'app-root',
@@ -12,8 +11,7 @@ export class AppComponent implements AfterViewInit {
   constructor(private test: CockpitNotificationService) {}
 
   ngAfterViewInit() {
-    // initializing the function
-    let svgPanZoom: SvgPanZoom.Instance = SvgPanZoom('#wolrd-map-svg');
+    // initializing the functio
     /* see typing definiton for more APIs. */
   }
 

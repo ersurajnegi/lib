@@ -1,12 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { CockpitNotificationModule } from 'cockpitNotification';
+import { CockpitNotificationModule, CockpitButtonModule } from 'cockpitNotification';
 
 import { AppComponent } from './app.component';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, CockpitNotificationModule],
+  imports: [BrowserModule, CockpitNotificationModule, CockpitButtonModule],
   providers: [],
   bootstrap: [AppComponent]
 })
